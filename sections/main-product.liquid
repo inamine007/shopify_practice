@@ -302,6 +302,8 @@
       </media-gallery>
     </div>
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
+      <!-- 商品タイプをメタフィールドから取得 -->
+      商品タイプ:{{ product.metafields.my_fields._product-type }}
       <div
         id="ProductInfo-{{ section.id }}"
         class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}"

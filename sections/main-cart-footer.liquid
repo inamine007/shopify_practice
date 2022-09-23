@@ -14,6 +14,16 @@
       {%- endif -%}
 
       <div class="cart__blocks">
+        <!-- 配送日時を指定するinputを追加 -->
+        <label for="delivery-date">配送日時指定</label>
+        <input id="delivery-date"
+          class="field__input"
+          type="date"
+          name="attributes[delivery-date]"
+          form="cart"
+          value="{{ cart.attributes['delivery-date'] }}"
+          required
+        >
         {% for block in section.blocks %}
           {%- case block.type -%}
             {%- when '@app' -%}
